@@ -46,7 +46,7 @@ El concurso cuenta con 5 niveles, cada nivel con un puntaje diferente.
 MIT
 
 ``sh
-El codigo contiene comentarios que expecifican  en detalle las funciones de cada clase, metodo o propiedad
+El codigo contiene comentarios que especifican  en detalle las funciones de cada clase, metodo o propiedades
 ``
 
 **Free Software, Hell Yeah!**
