@@ -2,6 +2,7 @@
 ## Desafio
 
 El siguiente programa esta desarrollado con el manejo de clases u objetos
+Programa con Interfaz de usuario de texto .
 
 - 5 CATEGORIAS
 - 5 NIVEL
@@ -42,7 +43,9 @@ El concurso cuenta con 5 niveles, cada nivel con un puntaje diferente.
 > Nivel 5 - 50 puntos
 ## License
 MIT
-
+``sh
+El codigo contiene comentarios que expecifican  en detalle las funciones de cada clase, metodo o propiedad
+``
 **Free Software, Hell Yeah!**
 
 
