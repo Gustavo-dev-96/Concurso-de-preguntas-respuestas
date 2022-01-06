@@ -22,12 +22,32 @@ public class Respuestas {
        "mamifero","tierra","Atmosfera","Zoologia","guepardo"
      };
     
+    String[]  respuestas3 = {
+       "1492","XVI","grecia","Austria","1939"
+     };
+    
+    String[]  respuestas4 = {
+       "6","60.50","746640","3.14","doceavo"
+     };
+    
+    String[]  respuestas5 = {
+       "8","70%","Portugues","mir","Alemania"
+     };
     
     public String getRespuesta(int posicion, int categoria){
-        if (categoria == 0) {
-            return respuestas[posicion];
-        }else if (categoria == 1){
-            return respuestas2[posicion];
+        switch (categoria) {
+            case 0:
+                return respuestas[posicion];
+            case 1:
+                return respuestas2[posicion];
+            case 2:
+                return respuestas3[posicion];
+            case 3:
+                return respuestas4[posicion];
+            case 4:
+                return respuestas4[posicion];
+            default:
+                break;
         }
         
         return null;
@@ -57,14 +77,39 @@ public class Respuestas {
     
     public String[]  setRespuesta (int  posicion, int categoria){
         String[] s2 = null;
-        if (categoria == 0) {
-            String  s1 =  banco.opciones[posicion];
-            s2=  separar(s1,",");
-            return s2;
-        }else if(categoria == 1){
-            String  s1 =  banco.opciones2[posicion];
-            s2=  separar(s1,",");
-            return s2;
+        switch (categoria) {
+            case 0:
+            {
+                String  s1 =  banco.opciones[posicion];
+                s2=  separar(s1,",");
+                return s2;
+            }
+            case 1:
+            {
+                String  s1 =  banco.opciones2[posicion];
+                s2=  separar(s1,",");
+                return s2;
+            }
+            case 2:
+            {
+                String  s1 =  banco.opciones3[posicion];
+                s2=  separar(s1,",");
+                return s2;
+            }
+            case 3:
+            {
+                String  s1 =  banco.opciones4[posicion];
+                s2=  separar(s1,",");
+                return s2;
+            }
+            case 4:
+            {
+                String  s1 =  banco.opciones5[posicion];
+                s2=  separar(s1,",");
+                return s2;
+            }
+            default:
+                break;
         }
         
         return s2;

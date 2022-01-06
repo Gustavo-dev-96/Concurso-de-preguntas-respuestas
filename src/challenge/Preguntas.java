@@ -29,29 +29,65 @@ public class Preguntas {
     public String getPregunta( int category, int nivel){
 
         String pregunta = null;
-        if (category == 0 ) {
-            for (int i = 0; i < banco.preguntas.length; i++) {
-                String  s1 = banco.preguntas[i];
-                String[] s2 = separarPregunta(s1,",");
-                int level = Integer.parseInt(s2[1]);
+        switch (category) {
+            case 0:
+                for (int i = 0; i < banco.preguntas.length; i++) {
+                    String  s1 = banco.preguntas[i];
+                    String[] s2 = separarPregunta(s1,",");
+                    int level = Integer.parseInt(s2[1]);
+                    
+                    if ( level == nivel) {
+                        pregunta = s2[0];
+                        posicion = i;
+                    }
+                }   break;
+            case 1:
+                for (int i = 0; i < banco.preguntas2.length; i++) {
+                    String  s1 = banco.preguntas2[i];
+                    String[] s2 = separarPregunta(s1,",");
+                    int level = Integer.parseInt(s2[1]);
+                    
+                    if ( level == nivel) {
+                        pregunta = s2[0];
+                        posicion = i;
+                    }
+                }   break;
+            case 2:
+                for (int i = 0; i < banco.preguntas3.length; i++) {
+                    String  s1 = banco.preguntas3[i];
+                    String[] s2 = separarPregunta(s1,",");
+                    int level = Integer.parseInt(s2[1]);
+                    
+                    if ( level == nivel) {
+                        pregunta = s2[0];
+                        posicion = i;
+                    }
+                }   break;
+             case 3:
+                for (int i = 0; i < banco.preguntas4.length; i++) {
+                    String  s1 = banco.preguntas4[i];
+                    String[] s2 = separarPregunta(s1,",");
+                    int level = Integer.parseInt(s2[1]);
+                    
+                    if ( level == nivel) {
+                        pregunta = s2[0];
+                        posicion = i;
+                    }
+                }   break;
                 
-                if ( level == nivel) {
-                    pregunta = s2[0];
-                    posicion = i;
-                }
-            }
-            
-        }else if(category == 1){
-            for (int i = 0; i < banco.preguntas2.length; i++) {
-                String  s1 = banco.preguntas2[i];
-                String[] s2 = separarPregunta(s1,",");
-                int level = Integer.parseInt(s2[1]);
-                
-                if ( level == nivel) {
-                    pregunta = s2[0];
-                    posicion = i;
-                }
-            }
+               case 4:
+                for (int i = 0; i < banco.preguntas5.length; i++) {
+                    String  s1 = banco.preguntas5[i];
+                    String[] s2 = separarPregunta(s1,",");
+                    int level = Integer.parseInt(s2[1]);
+                    
+                    if ( level == nivel) {
+                        pregunta = s2[0];
+                        posicion = i;
+                    }
+                }   break;
+            default:
+                break;
         }
         
         return pregunta;
@@ -70,6 +106,7 @@ public class Preguntas {
             }
             return PreguntaNivel;
         }  
+        
         public int AleatorioCategoria(){
             return aleatorio.nextInt(4);
         }
