@@ -1,5 +1,5 @@
 # CONCURSO DE PREGUNTAS Y RESPUESTAS
-## Challenge
+## Desafio
 
 El siguiente programa esta desarrollado con el manejo de clases u objetos
 
@@ -7,21 +7,13 @@ El siguiente programa esta desarrollado con el manejo de clases u objetos
 - 5 NIVEL
 - ✨PUNTAJE MIN 0 MAX 150
 
-## Features
+## Caracteristicas
 
 - Guarda nombre y el puntaje del participante
 - Selecciona de manera aleatoria las preguntas 
 - Cuenta con un Banco de Preguntas-
 
 Lenguaje de programación JAVA
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
 
 This text you see here is *actually- written in Markdown! To get a feel
 for Markdown's syntax, type some text into the left window and
@@ -52,4 +44,5 @@ El concurso cuenta con 5 niveles, cada nivel con un puntaje diferente.
 MIT
 
 **Free Software, Hell Yeah!**
+
 
