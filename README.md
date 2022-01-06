@@ -42,10 +42,13 @@ El concurso cuenta con 5 niveles, cada nivel con un puntaje diferente.
 > Nivel 4 - 40 puntos
 > Nivel 5 - 50 puntos
 ## License
+
 MIT
+
 ``sh
 El codigo contiene comentarios que expecifican  en detalle las funciones de cada clase, metodo o propiedad
 ``
+
 **Free Software, Hell Yeah!**
 
 
