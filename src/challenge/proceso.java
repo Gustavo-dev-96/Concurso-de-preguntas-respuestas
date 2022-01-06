@@ -29,28 +29,29 @@ public class proceso {
          
         
         while(nivel <= 5){
-                    //Categoria aleatoria
+                   //Categoria aleatoria
                   int res = p.AleatorioCategoria();
                   //Nombre de la categoria
                   String categoria = p.categoria[res];
                   
                   System.out.println("Categoria " + categoria + " Nivel " + nivel);
-
+                  
+                  //Pregunta y posicion de la pregunta
                  String preg = p.getPregunta(res,nivel);
                  int posicion = p.PosicionPregunta();
                  
                  boolean result = false;
-         
+                 // valida si viene una pregunta
                 if (preg != null) {
-            
+                    //Traen las opciones de respuesta
                     String[] resp = r.setRespuesta(posicion,res);
                 
                     if (resp != null) {
                         System.out.println(preg + "\n"+ Arrays.toString(resp));
                         String respUsuario = leer.next();
-
+                        //Trae la respuesta correcta
                         String correcta =  r.getRespuesta(posicion, res);
-
+                        //validad si la respuesta del usuario es correcta o incorrecta
                         result = r.getValidar(respUsuario, correcta);
 
                         if (result) {
@@ -68,12 +69,20 @@ public class proceso {
                 }else{
                     System.out.println("No hay datos");
                 }
-             
+                //Puntuación
                 if(result){
                    
                     score = puntaje(nivel);
                     if (nivel <5) {
                         System.out.println("\n Hasta el momento tienes " + score+ " puntos \n ");
+                        // Validad si el usuario quiere continuar o no 
+                        System.out.println("\n Desea continuar ? Si/No  \n " );
+                        String validar =leer.next();
+
+                        if ("no".equalsIgnoreCase(validar)) {
+                               System.out.println("\n Finalizaste tu puntaje es de  " + score+ "\n ");
+                                break;
+                         }
                     }else{
                         System.out.println("\n Finalizaste tu puntaje es de  " + score+ "\n ");
                     }
@@ -86,12 +95,7 @@ public class proceso {
                     break;
                 }
                 
-                System.out.println("\n Desea continuar ? Si/No  \n " );
-                String validar =leer.next();
                 
-                if ("no".equalsIgnoreCase(validar)) {
-                        break;
-                 }
         }
         
        
@@ -99,7 +103,7 @@ public class proceso {
     
     /**
      *
-     * @param nivel
+     * @param nivel se pasa el nivel en el que esta el usuario para otorgar el puntaje correspondiente
      */
     public int  puntaje(int nivel){
         

@@ -15,7 +15,13 @@ public class Participante {
      private String nombre;
      private int puntaje;
      
-     public Participante(String nombre, int puntaje){
+    /**
+     *Permite registrar el nombre del participante y su puntaje
+     * 
+     * @param nombre nombre del participante
+     * @param puntaje puntaje correspondiente a las preguntas correctas
+     */
+    public Participante(String nombre, int puntaje){
          this.nombre = nombre;
          this.puntaje = puntaje;
      }

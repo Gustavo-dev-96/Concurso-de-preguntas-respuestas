@@ -50,7 +50,9 @@ public class Challenge {
                 case 1:
                         System.out.println("\n Ingrese su numbre \n");
                         nombre = lectura.next();
+                        
                         proceso init = new proceso();
+                        //Agrega al participante en el historial
                         puntaje =  init.puntos;
                         AgregarJugador(nombre,puntaje);
                     break;
@@ -77,7 +79,7 @@ public class Challenge {
         Participante participante = new  Participante(nombre,puntaje);
         jugador.add(participante);
     }
-
+     
      static  void  VisualizarRegistros(){
         for (int i = 0; i < jugador.size(); i++) {
                System.out.println("Nombre: " +jugador.get(i).getNombre() + " / puntaje: " + jugador.get(i).getPuntaje());

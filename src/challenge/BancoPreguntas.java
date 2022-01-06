@@ -10,6 +10,15 @@ package challenge;
  */
 public class BancoPreguntas {
     
+    /**
+     *Esta clase contiene todas las preguntas y respuestas del concurso
+     * cada array contiene 5 posiciones. En el array de preguntas contiene dos datos en cada posición
+     * "pregunta,nivel" con el metodo separar de la clase Preguntas se obtiene por aparte la pregunta 
+     * y el nivel de la pregunta. En los array de opciones cada posicion contiene 4 datos que corresponde a las cuatro
+     * opciones de respuesta, las cuales tambien se separan con el metodo separar de la clase Respuestas
+     * 
+     */
+    
     //Geografia
      String[] preguntas = {
         "¿Cuál es la capital de Canadá?,5",
